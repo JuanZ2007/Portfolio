@@ -1,0 +1,239 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    color: #1a1a1a;
+    scroll-behavior: smooth;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* TODAS LAS SECCIONES MISMO TAMAÑO */
+.box {
+    min-height: 450px;
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0b3d91;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: white;
+    color: #0b3d91;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.nav-btn:active {
+    transform: translateY(-2px) scale(0.97);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* SOBRE MI */
+.hero {
+    background: linear-gradient(135deg, #0b3d91, #3b82f6);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* SKILLS */
+.skills-section {
+    background: #eef2ff;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skills-card {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.skills-card li {
+    padding: 6px 0;
+    font-size: 1rem;
+}
+
+/* FORMACION */
+.education-section {
+    background: #ffffff;
+    box-shadow: inset 0 0 0 3px #0b3d91;
+}
+
+.edu-card {
+    background: #f9fafb;
+    padding: 25px 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.edu-subtitle {
+    color: #0b3d91;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* EXPERIENCIA */
+.experience-section {
+    background: #eef2ff;
+}
+
+/* IDIOMAS */
+.language-section {
+    background: #ffffff;
+}
+
+.language-section p {
+    padding: 12px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* CONTACTO */
+.contact-section {
+    background: linear-gradient(135deg, #0b3d91, #3b82f6);
+    color: white;
+}
+
+.contact-info {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.contact-info p {
+    background: rgba(255,255,255,0.15);
+    padding: 12px;
+    border-radius: 15px;
+    margin: 12px 0;
+}
+
+/* TITULOS */
+.main-title,
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .skills-card {
+        width: 100%;
+    }
+
+    .box {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+}
+
+/* TITULOS PRINCIPALES */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 800; /* más negrita */
+    color: #0b3d91;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* opcional para resaltar */
+}
+
+/* TITULOS DE SECCION */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700; /* negrita */
+    color: #0b3d91;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3b82f6; /* línea debajo para resaltar */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* SUBTITULOS (como en Sobre mí, Formacion, etc.) */
+.section-subtitle,
+.edu-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600; /* ligeramente negrita */
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+/* TEXTO NORMAL */
+.intro-text,
+.skills-card li,
+.edu-card li,
+.experience-section p,
+.language-section p,
+.contact-info p {
+    font-weight: 400; /* normal */
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+}
+
+/* OPCIONAL: diferenciar textos dentro de contact-info */
+.contact-info p strong {
+    font-weight: 700; /* resaltar etiquetas tipo "Correo:", "Teléfono:" */
+    color: white;
+}
